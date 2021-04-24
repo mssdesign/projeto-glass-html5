@@ -84,7 +84,7 @@
 
             header#cabecalho img#icone {  /*alterando a foto do óculos na página inicial*/
                 position: absolute;
-                left: 100px;
+                left: 1000px;
                 top: 50px;                
             }
             
