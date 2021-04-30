@@ -1,9 +1,30 @@
             @charset "UTF-8";
+            @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+            @font-face {
+                font-family: 'FonteLogo';
+                src: url("../_fonts/bubblegum-sans-regular.otf"); /*Colocar dois pontos (..) para voltar uma pasta*/
+            }
+
+            body {
+                font-family: arial, sans-serif;
+                background-color: #ffffff;
+                color: rgba(0,0,0,1);
+            }
+
             p {
                 text-indent:50px;   /* DAR ESPAÇO NO PRIMEIRO PARAGRAFO */
                 text-align:justify  /* ALINHAR TEXTO */
             }
             /*Formatação de imagens com legendas */
+
+            a {
+                color: #606060;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
 
             figure.foto-legenda {
                 position:relative;  /* POSICIONAR DENTRO DO CONTAINER */
@@ -80,13 +101,147 @@
                 padding: 10px;/*margem dentro da área da interface na ordem: cima, baixo, direita e esquerda (pode colocar só uma vez que considera o mesmo valor para todos)*/                
             }
 
+            header#cabecalho {
+                border-bottom: 1px #606060 solid;
+                height: 150px;
+                background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+            }
+
+            header#cabecalho h1 {
+                font-family: 'FonteLogo', sans-serif;                
+                font-size: 30pt;
+                color: #606060;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+                padding: 0px;
+                margin-bottom: 0px;
+            }
+
+            header#cabecalho h2 {
+                font-family: 'Titillium Web', sans-serif;
+                color: #888888;
+                font-size: 15pt;
+                padding: 0px;
+                margin-top: 0px;
+            }
+
             /*Formatação de imagens com legendas*/
 
             header#cabecalho img#icone {  /*alterando a foto do óculos na página inicial*/
                 position: absolute;
                 left: 1000px;
-                top: 50px;                
+                top: 70px;                
+            }
+
+            aside#lateral {
+                display: block;
+                width: 450px;
+                float: right;
+                background-color: #dddddd;
+                padding: 10px;
+                margin-top: 10px;
+                box-shadow: 2px 2px 2px rgba(0,0,0,.5); /* lateral, vertical, espalhamento e cor*/
+            }  /*Para posicionar um conteúdo lado a lado é preciso usar float nas duas seções*/
+            
+            aside#lateral h1 {
+                font-family: 'FonteLogo', sans-serif;
+                font-size: 20pt;
+                color:#606060;
+                margin-top: 0px;
             }
             
+            aside#lateral h2 {
+                background-color: #606060;
+                font-size: 13pt;
+                color:#ffffff;
+                padding: 5px;
+            }
 
+            section#corpo {
+                display: block;
+                width: 500px;
+                border-right: 1px solid #606060 ; /*borda lateral espessura, tipo de linha e cor*/
+                padding-right: 15px;
+                padding-bottom: 15px;
+                float: left;
+            }
+
+            article#noticia-principal h2 {
+                font-size: 12pt;
+                color: #606060;
+                background-color: #dddddd;
+                padding: 5px 0px 5px 10px;
+                margin: 10px 0px 10px 0px; /*Cima - direita - baixo - esquerda*/
+            }
+
+            header#cabecalho-artigo h1 {
+                font-family: 'Fontelogo', sans-serif;                                
+                font-size: 20pt;
+                color: #606060;
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+
+            .direita {
+                text-align: right;
+            }
+
+            header#cabecalho-artigo h2 {
+                font-size: 13pt;
+                color: #cecece;
+                background-color: #ffffff;
+                margin-top: 0px;
+            }
+
+            header#cabecalho-artigo h3{
+                font-size: 12px;
+                color: #606060;
+            }
+
+            table#tabelaspec {
+                border: 1px solid #606060;
+                border-spacing: 0px;
+                margin-left: auto;
+                margin-right:auto;
+            }
+            
+            table#tabelaspec td{
+                border: 1px solid #606060;
+                padding: 10px;
+                text-align: center;
+                vertical-align: middle;
+            }
+            
+            table#tabelaspec td.ce {       /*configuração de uma tabela com classes diferentes*/
+                color: #ffffff;           /*classes sobrepõem tag principal*/
+                background-color: #606060; /*A divisão em classes é importante para fazer coisas   diferentes com objetos de uma mesma id ou tag (isso é feito no html)*/
+                vertical-align: top;
+                font-weight: bold;
+            }
+
+            table#tabelaspec td.cd {
+                background-color: #cecece;
+            }
+
+            table#tabelaspec caption {
+                color: #888888;
+                font-size: 13pt;
+                font-weight: bolder;
+            }
+
+            table#tabelaspec caption span {
+                display: block;
+                float: right;
+                color: black;
+                font-size: 8pt;
+                margin-top: 10px;
+            }
+
+            footer#rodape {
+                clear: both;
+                border-top: 1px solid #606060;
+            }
+
+            footer#rodape p {
+                text-align: center;
+            }
            
